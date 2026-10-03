@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fishing Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎣 Fishing Tracker</h1>
+        <p>Keep track of your fishing trips and catches.</p>
+    </header>
+
+    <main>
+
+        <!-- Section for entering a new fish catch -->
+        <section id="catch-form">
+            <h2>Record a Catch</h2>
+
+            <input
+                type="text"
+                id="species"
+                placeholder="Fish Species"
+            >
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Location"
+            >
+
+            <input
+                type="number"
+                id="length"
+                placeholder="Length (inches)"
+            >
+
+            <input
+                type="text"
+                id="lure"
+                placeholder="Lure or Fly Used"
+            >
+
+            <input
+                type="date"
+                id="date"
+            >
+
+            <button id="add-catch">Add Catch</button>
+        </section>
+
+        <!-- Section showing fishing statistics -->
+        <section id="statistics">
+            <h2>Fishing Statistics</h2>
+
+            <p>
+                Total Fish:
+                <span id="total-fish">0</span>
+            </p>
+
+            <p>
+                Largest Fish:
+                <span id="largest-fish">None</span>
+            </p>
+
+            <p>
+                Total Inches:
+                <span id="total-inches">0</span>
+            </p>
+
+            <p>
+                Average Length:
+                <span id="average-length">0</span> inches
+            </p>
+        </section>
+
+        <!-- Chart showing the lengths of recorded fish -->
+        <section id="chart-section">
+            <h2>Catch Length Chart</h2>
+            <p>Compare the lengths of your recorded fish.</p>
+
+            <div id="chart-container">
+                <canvas id="catch-chart"></canvas>
+            </div>
+        </section>
+
+        <!-- Section showing all recorded catches -->
+        <section id="catch-list">
+            <h2>My Catches</h2>
+
+            <!-- Dropdown for sorting catches -->
+            <label for="sort-catches">Sort by:</label>
+
+            <select id="sort-catches">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="largest">Largest Fish First</option>
+                <option value="smallest">Smallest Fish First</option>
+            </select>
+
+            <!-- Search box for filtering catches -->
+            <input
+                type="text"
+                id="search"
+                placeholder="Search by fish species..."
+            >
+
+            <div id="catches"></div>
+        </section>
+
+    </main>
+
+    <!-- Load Chart.js before our own JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Connect our JavaScript file to the webpage -->
+    <script src="script.js"></script>
+
+</body>
+</html>

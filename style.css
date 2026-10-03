@@ -1,0 +1,111 @@
+/* Overall page styling */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f2f5f1;
+    color: #24352a;
+}
+
+/* Page heading */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #254b36;
+    color: white;
+    border-radius: 12px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Main sections */
+section {
+    margin-bottom: 25px;
+    padding: 22px;
+    background-color: white;
+    border: 1px solid #d2ddd3;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Section headings */
+h2 {
+    color: #315d42;
+    margin-top: 0;
+}
+
+/* Form inputs and dropdowns */
+input,
+select {
+    box-sizing: border-box;
+    padding: 11px;
+    margin: 5px;
+    border: 1px solid #b8c8bb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    padding: 11px 16px;
+    margin: 5px;
+    background-color: #36734b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #254b36;
+}
+
+/* Individual fish cards */
+.catch-card {
+    padding: 16px;
+    margin: 12px 0;
+    background-color: #f8faf7;
+    border: 1px solid #d2ddd3;
+    border-left: 5px solid #36734b;
+    border-radius: 8px;
+}
+
+.catch-card h3 {
+    margin-top: 0;
+    color: #315d42;
+}
+
+/* Statistics */
+#statistics p {
+    padding: 8px 0;
+    border-bottom: 1px solid #e3e9e3;
+}
+
+/* Chart sizing */
+#chart-container {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+}
+
+/* Make the page easier to use on phones */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
