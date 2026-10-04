@@ -1,99 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Sets the character encoding so text and symbols display correctly -->
     <meta charset="UTF-8">
+
+    <!-- Makes the webpage scale correctly on phones, tablets, and computers -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- The title displayed in the browser tab -->
     <title>Fishing Tracker</title>
 
+    <!-- Connects this HTML file to the stylesheet that controls the design -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Page header with the application name and a short description -->
     <header>
         <h1>🎣 Fishing Tracker</h1>
         <p>Keep track of your fishing trips and catches.</p>
     </header>
 
+    <!-- Main contains the primary content of the Fishing Tracker application -->
     <main>
 
-        <!-- Section for entering a new fish catch -->
+        <!-- FORM SECTION: Allows the user to enter information about a fish -->
         <section id="catch-form">
             <h2>Record a Catch</h2>
 
+            <!-- Text input for the species of fish caught -->
             <input
                 type="text"
                 id="species"
                 placeholder="Fish Species"
             >
 
+            <!-- Text input for the location where the fish was caught -->
             <input
                 type="text"
                 id="location"
                 placeholder="Location"
             >
 
+            <!-- Number input for the fish's length in inches -->
             <input
                 type="number"
                 id="length"
                 placeholder="Length (inches)"
             >
 
+            <!-- Records the lure or fly used to catch the fish -->
             <input
                 type="text"
                 id="lure"
                 placeholder="Lure or Fly Used"
             >
 
+            <!-- Allows the user to select the date of the catch -->
             <input
                 type="date"
                 id="date"
             >
 
+            <!-- JavaScript listens for this button click and saves a new catch -->
             <button id="add-catch">Add Catch</button>
         </section>
 
-        <!-- Section showing fishing statistics -->
+
+        <!-- STATISTICS SECTION: Displays information calculated from saved catches -->
         <section id="statistics">
             <h2>Fishing Statistics</h2>
 
+            <!-- JavaScript updates these spans whenever catches change -->
+
+            <!-- Displays the total number of fish recorded -->
             <p>
                 Total Fish:
                 <span id="total-fish">0</span>
             </p>
 
+            <!-- Displays the species and length of the largest recorded fish -->
             <p>
                 Largest Fish:
                 <span id="largest-fish">None</span>
             </p>
 
+            <!-- Displays the combined length of all recorded fish -->
             <p>
                 Total Inches:
                 <span id="total-inches">0</span>
             </p>
 
+            <!-- Displays the average length of all recorded fish -->
             <p>
                 Average Length:
                 <span id="average-length">0</span> inches
             </p>
         </section>
 
-        <!-- Chart showing the lengths of recorded fish -->
+
+        <!-- CHART SECTION: Visually compares the lengths of recorded fish -->
         <section id="chart-section">
             <h2>Catch Length Chart</h2>
             <p>Compare the lengths of your recorded fish.</p>
 
+            <!-- CSS controls the size of this container.
+                 Chart.js draws the bar chart inside the canvas below. -->
             <div id="chart-container">
                 <canvas id="catch-chart"></canvas>
             </div>
         </section>
 
-        <!-- Section showing all recorded catches -->
+
+        <!-- CATCH LIST SECTION: Displays, searches, sorts, and deletes catches -->
         <section id="catch-list">
             <h2>My Catches</h2>
 
-            <!-- Dropdown for sorting catches -->
+            <!-- The selected option tells JavaScript how to sort the catches -->
             <label for="sort-catches">Sort by:</label>
 
             <select id="sort-catches">
@@ -103,22 +128,27 @@
                 <option value="smallest">Smallest Fish First</option>
             </select>
 
-            <!-- Search box for filtering catches -->
+            <!-- Typing here filters the displayed catches by fish species -->
             <input
                 type="text"
                 id="search"
                 placeholder="Search by fish species..."
             >
 
+            <!-- JavaScript creates a card for each catch and places it here -->
             <div id="catches"></div>
         </section>
 
     </main>
 
-    <!-- Load Chart.js before our own JavaScript -->
+
+    <!-- Loads the external Chart.js library.
+         It must load before script.js because our code uses Chart.js
+         to create and update the catch length graph. -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Connect our JavaScript file to the webpage -->
+    <!-- Loads our own JavaScript after the webpage elements exist.
+         This file handles input, calculations, saved data, and interactions. -->
     <script src="script.js"></script>
 
 </body>

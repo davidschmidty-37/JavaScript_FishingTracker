@@ -5,7 +5,7 @@ I love to fish. I currently live in Rexburg, Idaho and I'm really close to lots 
 I wanted to build a software that would help me practive JavaScript. What better way to practice a language than to build something you're interested in! I was able to develop a plan of learning leading up to this project. I have experience with programming concepts like arrays and objects but creating a webpage was brand new to me. I also made the website update live which made testing and using a lot more simple. I also had to learn and practice JavaScript concepts like recursion and error handling on this web page. I loved learning how to use the chart.js library to display a visible bar graph of the logged fish.
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video] https://youtu.be/Sgv3XT9b4bk
 
 # Development Environment
 
