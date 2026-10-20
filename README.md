@@ -1,31 +1,25 @@
 # Overview
 
-I love to fish. I currently live in Rexburg, Idaho and I'm really close to lots of great fishing. I wanted to create a a Fish Tracker so I could log my catches and easily measuer the data. This software uses JavaScript, HTML and CSS to help the user keep track of the fish they log. The user can log species, location, length, date, and the tackle used to catch the fish. The software uses user data to measure things like the largest fish caught, average length of fish.
-
-I wanted to build a software that would help me practive JavaScript. What better way to practice a language than to build something you're interested in! I was able to develop a plan of learning leading up to this project. I have experience with programming concepts like arrays and objects but creating a webpage was brand new to me. I also made the website update live which made testing and using a lot more simple. I also had to learn and practice JavaScript concepts like recursion and error handling on this web page. I loved learning how to use the chart.js library to display a visible bar graph of the logged fish.
+My name is David Schmidt and I am trying to design a Fishing Tracker App while learning new programming skills and improving current ones. I love to fish and so I figured designing a program that serves me a purpose is a great way to improve my skills. I previously designed this fishing tracker to run from the local browser storage. I mainly did that so I could focus on improving my JavaScript skills. I have never completed a project like this before and so the concept of Web Apps was brand new to me. This program allows the user to log the fish they caught along with some data for each fish. In this update, I added two new pages that help the user compare statistics and easily view their entire catch log. I also added some new features that allow the user to edit existing logs. The major feature of this update is that each catch is now stored on a server powered by node.js. My previous program utilized the browser as the application. Now the browser is just the interface while the code itself handles all the instructions along with a persistent storage in a json file. I'm proud of how the program runs and I'm looking forward to expanding its features. 
 
 
-[Software Demo Video] https://youtu.be/Sgv3XT9b4bk
+[Software Demo Video](https://youtu.be/4SQ7qhUb6zA)
+
+# Web Pages
+
+The main webpage is the Fishing Tracker. It handle a majority of user input. The Statistic page allows the user the view the statistics of each fish and all the comparison methods that I have added. The Detailed catch page basically just provides a presentable view of our json file. The user can view each catch and its associated values very easily. 
 
 # Development Environment
 
-I developed this software using Visual Studio Code. I used a web browser (Brave), to run the application and test its features.
-
-The software was written in JavaScript, HTML, and CSS. JavaScript handles the application logic, calculations, input validation, data storage, and chart updates. HTML provides the structure of the webpage, while CSS controls the layout and appearance. I used browser local storage to save fishing records and Chart.js, an external JavaScript library, to display the catch length chart.
+This software was built using Visual Studio Code. It was written in JavaScript, HTML, and CSS. It runs on a local browser while the server is ran by Node.js. I also utilized AI to help design a more asthetic css file.
 
 # Useful Websites
 
-* [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-* [MDN Web Docs - Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-* [MDN Web Docs - Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
-* [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
-* [MDN Web Docs - HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [Node.js Documentation](https://nodejs.org/docs/latest/api/)
+* [Fetch API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 # Future Work
 
-* Add the ability to edit a fishing record after it has been saved.
-* Add filters for fishing locations, dates, and fish species.
-* Improve the chart to compare catches by species or fishing location.
-* Add more detailed validation for unusually large fish lengths and dates.
-* Improve the layout and add more fishing-related statistics as the project grows.
-* Further the asthetics of the web page through CSS and HTML. 
+* Allow pictures to be added to each log
+* Utilize the stats being calculated and present them to the user to help them compare better. (Which lures and locations work well together etc.)
+* Add a user account system

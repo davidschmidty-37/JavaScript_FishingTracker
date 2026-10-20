@@ -1,0 +1,17 @@
+{
+  "name": "fishingtracker",
+  "version": "1.0.0",
+  "description": "I love to fish. I currently live in Rexburg, Idaho and I'm really close to lots of great fishing. I wanted to create a a Fish Tracker so I could log my catches and easily measuer the data. This software uses JavaScript, HTML and CSS to help the user keep track of the fish they log. The user can log species, location, length, date, and the tackle used to catch the fish. The software uses user data to measure things like the largest fish caught, average length of fish.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
